@@ -541,6 +541,23 @@ If not installed, use `pixi global install markdownlint-cli`.
 **Recommendation**: After pushing to the branch, create the PR using the GitHub
 CLI.
 
+### [2026-08-06] Build Documentation in the Docs Environment
+
+**Context**: Validating a documentation-only change.
+**Learning**: `pixi run docs` selects the default environment, which does not
+include MkDocs. The documentation task is available in the `docs` environment.
+**Recommendation**: Run `pixi run -e docs build-docs` to build documentation.
+
+### [2026-09-03] Distinguish Public Docs from Maintainer Comments
+
+**Context**: Reorganizing the `conditional_join` and `join_agg` documentation.
+**Learning**: Implementation details are not needed in user-facing generated
+documentation, but they can still be useful to maintainers working on the code.
+**Recommendation**: Keep public docstrings focused on user-visible behavior,
+arguments, limitations, and examples. Retain implementation-only explanations
+as source comments when they clarify non-obvious code or algorithms for
+maintainers.
+
 ---
 
 ## Version History
